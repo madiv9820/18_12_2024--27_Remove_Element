@@ -1,4 +1,5 @@
 - ## Approach 2:- Two Pointers
+
     - ### Intuition
         The goal is to remove all occurrences of a given value (`val`) from the input array (`nums`) while modifying the array in-place. The challenge is to achieve this without using extra space proportional to the array size.
 
