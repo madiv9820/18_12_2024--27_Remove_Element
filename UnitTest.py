@@ -14,13 +14,23 @@ class UnitTest(unittest.TestCase):
         nums, val, k, output = self.__testcases[1]
         result = self.__obj.removeElement(nums, val)
         self.assertIsInstance(result, int)
-        self.assertTrue(all(x == o for x, o in zip(nums[:k], output)))
+        self.assertEqual(k, result)
+        
+        nums = nums[:result]
+        nums.sort()
+        output.sort()
+        self.assertTrue(all(x == o for x, o in zip(nums, output)))
 
     @timeout(0.5)
     def test_case_2(self):
         nums, val, k, output = self.__testcases[2]
         result = self.__obj.removeElement(nums, val)
         self.assertIsInstance(result, int)
-        self.assertTrue(all(x == o for x, o in zip(nums[:k], output)))
+        self.assertEqual(k, result)
+        
+        nums = nums[:result]
+        nums.sort()
+        output.sort()
+        self.assertTrue(all(x == o for x, o in zip(nums, output)))
 
 if __name__ == '__main__': unittest.main()
